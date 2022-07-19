@@ -34,13 +34,17 @@ $("#time-16 .time-block").val(localStorage.getItem("time-16"));
 $("#time-17 .time-block").val(localStorage.getItem("time-17"));
 
 // A function to listen for the save button being clicked
-// function saveButton() {
-//     
+$( ".saveBtn" ).click(function() {
+    // alert( "Hi, I worked!" );
+    var value = (timeblock.val());
+    // var time = ();
+    localStorage.setItem(value);
+});  
 
-//     localStorage.setItem(time, value);
 // };
 
 // // Call functions and event listeners
-// saveBtn.on("click", saveButton);
+
+
 
 schedulerColor();
