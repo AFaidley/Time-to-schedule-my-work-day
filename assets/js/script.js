@@ -1,6 +1,7 @@
 // Global scope vars
 // console.log(new Date().getHours())
-var currenthour = new Date().getHours();
+var currentHour = new Date().getHours();
+var saveBtn = $(".saveBtn");
 
 // Prints time at the top, 'Do' adds the th in 19th for exmaple, hh' makes it 12hr time and the 'a' adds AM or PM
 setInterval(() => {
@@ -11,15 +12,15 @@ setInterval(() => {
 // Changes the color of the blocks by assigning a class to them according to the hour
 function schedulerColor() {
   for (let i = 9; i < 18; i++) {
-    if (now > i) {
+    if (currentHour > i) {
       $(`#time-${i}`).addClass("past");
-    } else if (now == i) {
+    } else if (currentHour == i) {
       $(`#time-${i}`).addClass("present");
     } else {
       $(`#time-${i}`).addClass("future");
     }
   }
-}
+};
 
 // Gets any saved data from local storage
 $("#time-9 .time-block").val(localStorage.getItem("time-9"));
@@ -33,6 +34,13 @@ $("#time-16 .time-block").val(localStorage.getItem("time-16"));
 $("#time-17 .time-block").val(localStorage.getItem("time-17"));
 
 // A function to listen for the save button being clicked
+// function saveButton() {
+//     
 
+//     localStorage.setItem(time, value);
+// };
 
-// Call functions
+// // Call functions and event listeners
+// saveBtn.on("click", saveButton);
+
+schedulerColor();
