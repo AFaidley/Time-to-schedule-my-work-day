@@ -5,7 +5,8 @@
 I bulit a workday (9-5) scheduler using CSS, HTML, Javascript, JQuery and Bootstrap.
 This will help the working individual to better plan their workday, as well as have a clear knowledge of what they need to accomplish in their day!
 
-Link to Deployed Application: ----------------------------------------------------
+Here is the link to my deployed application:
+https://afaidley.github.io/Time-to-schedule-my-work-day/
 
 ## Usage
 
